@@ -20,8 +20,8 @@ const languages = [
 ];
 
 const PRODUCT_DATA_API_TOKEN = "7k4UMEQ*gR.RY88FjBvAWw.TYapyUR";
-const CMS_API_SECRET = process.env("CMS_API_SECRET");
-
+const CMS_API_SECRET = process.env.CMS_API_SECRET;
+process.E
 console.log(chalk.green('\nFetching data from APIs...'));
 console.log(chalk.yellow("-------------------------"));
 console.log(chalk.yellow(`PRODUCT_DATA_API_TOKEN: ${PRODUCT_DATA_API_TOKEN}`));
