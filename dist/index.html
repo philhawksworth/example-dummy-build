@@ -1,11 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dummy build example site</title>
+  <title>Secrets Controller</title>
+  <link rel="preload" href="/fonts/PacaembuVar-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/MulishVar-subset.woff2" as="font" type="font/woff2" crossorigin>
+	
+  <link rel="stylesheet" href="/styles.css">
+	<style>h2 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    border-radius: var(--radius);
+    box-shadow: 0 0 8px 3px hsla(0,0%,0%,.1);
+    margin-bottom: 2rem;
+    padding:1em 3rem 2em;
+    text-align:left;
+  }
+
+  .highlight {
+    background: var(--colorCardGradient90);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+  }
+
+  .cta-links {
+    text-align:right;
+    margin-top: 3rem;
+  }
+header {
+    display:flex;
+    padding: 2rem 2rem 0.5rem;
+    margin:0 auto;
+    line-height:1;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 600px;
+  }
+  header h1 {  
+    font-size: 0.9rem;
+    margin:0;
+  }
+
+  .nav {
+    list-style:none;
+    margin:0;`
+    padding:0;
+  }
+  .nav li {
+    display:inline-block;
+    margin-right:.5rem;
+  }
+  .nav li:last-child {
+    padding-right:0rem;
+  }
+
+  header a:link,
+  header a:visited {
+    color: var(--text-color-mild);
+    text-decoration:none;
+  
+  }
+  header a:hover,
+  header a:focus {
+    color: var(--accent-color);
+  }
+footer {
+    max-width: 600px;
+    margin: 5rem auto 5rem;
+    padding-top:3rem;
+    font-size:0.9rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap:2rem 5rem;
+    text-align:left;
+    border-top: solid 1px var(--color-hint);
+  }
+
+  footer ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+    line-height:1.9;
+  }
+  footer section {
+    margin:0;
+    padding:0;
+  }
+
+  footer a:link,
+  footer a:visited {
+    color: var(--text-color-mild);
+    text-decoration:none;
+  }
+  footer a:hover,
+  footer a:focus {
+    color: var(--accent-color);
+    text-decoration:underline;
+  }
+
+    footer .netlify-logo {
+    --_netlify-logo-lines-color: var(--neutral-dark-200);
+    --_netlify-logo-text-color: var(--neutral-dark-400);
+
+  }
+  footer a:hover .netlify-logo,
+  footer a:focus .netlify-logo {
+    --_netlify-logo-lines-color: var(--teal-400);
+    --_netlify-logo-text-color: var(--accent-color);
+  }</style>
+  <script>window.customElements.define("theme-switcher", class extends HTMLElement {
+  connectedCallback() {
+    console.log("theme");
+    let btn = this.querySelector("button");
+    console.log(btn);
+    btn.addEventListener("click", () => {
+      let page = document.querySelector("html");
+      page.classList.toggle("theme-dark");
+    });
+  }
+});</script>
 </head>
-<body>
-  <h1>Dummy build example site</h1>
+<body class="theme"><header>
+  <a href="https://www.netlify.com" aria-label="Deployed with Netlify" class="icon">							
+  <svg role="img" aria-hidden="true" focusable="false" class="icon netlify-logo">
+    <use href="/img/icons.svg#netlify-logo-full-small"></use>
+  </svg>
+  </a>  
+  <theme-switcher><!-- <button type="button">Toggle Theme</button> -->
+</theme-switcher>
+  <ul class="nav">
+    <li><a href="/">home</a></li>
+    <li><a href="/about">about</a></li>
+    <li><a href="/styleguide">docs</a></li>
+  </ul>
+</header>
+
+
+
+
+
+<h1>Secrets Controller</h1>
+<main><p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, commodi nam neque earum possimus omnis officia suscipit eveniet debitis optio veniam quam harum rem fuga illum libero iusto exercitationem ullam!
+</p>
+
+
+<div title="Secure secret management" cta="Explore the documentation" class="card highlight">
+  <h2>Secure secret management</h2>
+  <p>
+  Avoid leaking secure values through centralized management and automated code scanning.
+</p>
+  <div class="cta-links">
+    <a href="/styleguide/">Explore the documentation</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</main> 
+<footer>
+  <section>
+    <a href="https://www.netlify.com" aria-label="Deployed with Netlify" class="icon">							
+      <svg role="img" aria-hidden="true" focusable="false" class="icon netlify-logo">
+        <use href="/img/icons.svg#netlify-logo-full-small"></use>
+      </svg>
+    </a>  
+  </section>
+  <section>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/styleguide/">Styleguide</a></li>
+    </ul>
+  </section>
+  <section>
+    <ul>
+      <li><a href="https://www.netlify.com/">Deploys by Netlify</a></li>
+      <li><a href="https://www.11ty.dev/docs/languages/webc/">Built with Eleventy and WebC</a></li>
+      <li><a href="https://github.com/philhawksworth/demo-scaffold">Site code repository</a></li>
+    </ul>
+  </section>
+</footer>
+
+
+
 </body>
 </html>
