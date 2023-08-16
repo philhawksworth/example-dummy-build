@@ -19,7 +19,7 @@ const languages = [
   // "de"
 ];
 
-const PRODUCT_DATA_API_TOKEN = "7k4UMEQ*gR.RY88FjBvAWw.TYapyUR";
+const PRODUCT_DATA_API_TOKEN = process.env.PRODUCT_DATA_API_TOKEN;
 const CMS_API_SECRET = process.env.CMS_API_SECRET;
 
 console.log(chalk.green('\nFetching data from APIs...'));
