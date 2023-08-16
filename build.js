@@ -19,12 +19,12 @@ const languages = [
   // "de"
 ];
 
-const PIM_API_TOKEN = "123456";
-const CMS_API_SECRET = "ABC1123";
+const PRODUCT_DATA_API_TOKEN = "7k4UMEQ*gR.RY88FjBvAWw.TYapyUR";
+const CMS_API_SECRET = process.env("CMS_API_SECRET");
 
 console.log(chalk.green('\nFetching data from APIs...'));
 console.log(chalk.yellow("-------------------------"));
-console.log(chalk.yellow(`PIM_API_TOKEN: ${PIM_API_TOKEN}`));
+console.log(chalk.yellow(`PRODUCT_DATA_API_TOKEN: ${PRODUCT_DATA_API_TOKEN}`));
 console.log(chalk.yellow(`CMS_API_SECRET: ${CMS_API_SECRET}`));
 console.log(chalk.yellow("-------------------------"));
 
